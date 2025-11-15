@@ -12,11 +12,8 @@ HOSTNAME = socket.gethostname()
 INSTANCE_ID = f"{HOSTNAME}:{APP_NAME}:{INSTANCE_PORT}"  # ID unique pour Eureka
 
 def get_host_ip():
-    """Retourne l’adresse IP locale du serveur."""
-    try:
-        return socket.gethostbyname(HOSTNAME)
-    except:
-        return "127.0.0.1"
+    return "127.0.0.1"  # ou ton IP réelle du PC
+
 
 def register_instance():
     """Enregistre le service dans Eureka."""
